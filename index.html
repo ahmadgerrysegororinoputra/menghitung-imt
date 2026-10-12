@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator IMT Sederhana</title>
+  <!-- Menghubungkan CSS terpisah -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Kalkulator IMT</h1>
+    <p class="subtitle">Hitung Indeks Massa Tubuh Anda dengan mudah</p>
+
+    <div class="form-group">
+      <label for="berat">Berat Badan (kg)</label>
+      <input type="number" id="berat" placeholder="Contoh: 60" min="1" step="0.1">
+    </div>
+
+    <div class="form-group">
+      <label for="tinggi">Tinggi Badan (cm)</label>
+      <input type="number" id="tinggi" placeholder="Contoh: 165" min="1" step="0.1">
+    </div>
+
+    <div class="btn-group">
+      <button class="btn-submit" onclick="hitungIMT()">Hitung</button>
+      <button class="btn-reset" onclick="resetForm()">Reset</button>
+    </div>
+
+    <!-- Kotak Hasil -->
+    <div id="result" class="result-box">
+      <div>Skor IMT Anda:</div>
+      <div class="score" id="scoreValue">0.0</div>
+      <div class="category" id="categoryValue">-</div>
+      <div class="info-desc" id="descValue">-</div>
+    </div>
+
+    <!-- Tabel Kategori -->
+    <div class="table-section">
+      <h2>Kategori IMT (Standar Kemenkes RI)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Kategori</th>
+            <th>Rentang IMT</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Kurang Berat Badan</td>
+            <td>&lt; 18.5</td>
+          </tr>
+          <tr>
+            <td>Normal (Ideal)</td>
+            <td>18.5 - 22.9</td>
+          </tr>
+          <tr>
+            <td>Kelebihan Berat Badan</td>
+            <td>23.0 - 24.9</td>
+          </tr>
+          <tr>
+            <td>Obesitas</td>
+            <td>&ge; 25.0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Menghubungkan JavaScript terpisah -->
+  <script src="script.js"></script>
+</body>
+</html>
